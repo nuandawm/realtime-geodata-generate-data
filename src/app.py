@@ -10,4 +10,11 @@ from shapely.geometry import shape
 
 if __name__ == "__main__":
     df_commuter = pd.read_csv("./data/data.csv")
-    df_commuter.head()
+
+    osmnx.config(use_cache=True, log_console=True) 
+
+    query_city = {'city': 'City of London'}
+
+    gdf = osmnx.geocode_to_gdf(query_city)
+
+    print(gdf.head())

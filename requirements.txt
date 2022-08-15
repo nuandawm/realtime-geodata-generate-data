@@ -5,4 +5,3 @@ matplotlib==3.5.1
 osmnx==1.1.2
 pandas==1.4.2
 seaborn==0.11.2
-contextily==1.2.0
